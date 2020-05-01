@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<head>
+    <link href="Content/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <form method="post" action="./" id="ctl01">
+       
+        
+        
+      
+    
+        
+                
+                <div class="container body-content">
+                    
+            
+            
+                
+            <div class="jumbotron">
+                  
+        
+        
+                 <div id="MainContent_UpdatePanel3">
+            
+                           <div class="row">
+                  <div class="form-horizontal">
+                                        <div class="col-md-3">
+                    <input type="submit" name="B_serch" value="بحث" id="MainContent_B_serch" disabled="disabled" class="aspNetDisabled form-control btn-warning disabled active">
+                  </div> 
+                  <div class="col-md-3">
+                 <span id="MainContent_Label16" style="font-weight:bold;"> اليوم</span><select name="m_day" id="MainContent_m_day" class=" form-control" style="font-weight:bold;">
+                <option value="الاحد">الاحد</option>
+                <option value="الاثنين">الاثنين</option>
+                <option value="الثلاثاء">الثلاثاء</option>
+                <option value="الاربعاء">الاربعاء</option>
+                <option value="الخميس">الخميس</option>
+                <option value="الجمعة">الجمعة</option>
+                <option value="السبت">السبت</option>
+        
+            </select>
+                      </div>
+                      <div class="col-md-2">
+                           <span id="MainContent_Label14" style="font-weight:bold;"> الوقت </span><input name="m_time" type="time" id="MainContent_m_time" class=" form-control" required="required">
+                      </div>
+                       <div class="col-md-4">
+                            <span id="MainContent_Label15" style="font-weight:bold;"> التاريخ </span><input name="m_date" type="date" id="MainContent_m_date" class=" form-control" required="required">
+                      </div>
+                       <div class="row">
+                       <div class="col-md-3">
+                           <input name="d_name1" type="text" id="MainContent_d_name1" class=" form-control" placeholder="اسم السائق" required="required">
+                      </div>
+                         <div class="col-md-3">
+                           <input name="Nationality1" type="text" id="MainContent_Nationality1" class=" form-control" placeholder="الجنسية">
+                      </div>
+                         <div class="col-md-3">
+                           <input name="pass_id1" type="text" id="MainContent_pass_id1" class=" form-control" placeholder="رقم الجواز">
+                      </div>
+                         <div class="col-md-3">
+                           <input name="phone1" type="text" id="MainContent_phone1" class=" form-control" placeholder="رقم الهاتف/الواتس">
+                      </div>
+                         <div class="col-md-3">
+                             <span id="MainContent_Label1" style="font-weight:bold;">هل تم اخضاعك لفحص فيروس كرونا؟</span>
+                             </div>
+                            <div class="col-md-2">
+                             <table id="MainContent_Exam_state1">
+                <tbody><tr>
+                    <td><input id="MainContent_Exam_state1_0" type="radio" name="Exam_state1" value="نعم"><label for="MainContent_Exam_state1_0">نعم</label></td><td><input id="MainContent_Exam_state1_1" type="radio" name="Exam_state1" value="لا"><label for="MainContent_Exam_state1_1">لا</label></td>
+                </tr>
+            </tbody></table>
+                                      </div>
+                         <div class="col-md-3">
+                             <span id="MainContent_Label2" style="font-weight:bold;">اذا كانت الاجابة نعم يجب اكمال البيانات</span>
+                      </div>
+                        <div class="col-md-2">
+                           <span id="MainContent_Label12" style="font-weight:bold;"> متى </span><input name="Exam_det1" type="date" id="MainContent_Exam_det1" class=" form-control" placeholder="متى">
+                      </div>
+                        <div class="col-md-2">
+                          <span id="MainContent_Label13" style="font-weight:bold;"> اين </span> <input name="Exam_date1" type="text" id="MainContent_Exam_date1" class=" form-control" placeholder="اين">
+                      </div></div> 
+                       <div class="col-md-12" style="text-align: center">
+                             <span id="MainContent_Label9" class="alert-success" style="font-size:Larger;font-weight:bold;font-size: x-large"></span>
+                      </div>
+                      
+                       <div class="row">
+                       <div class="col-md-3">
+                           <input name="d_name" type="text" id="MainContent_d_name" class=" form-control" placeholder="اسم مساعد السائق">
+                      </div>
+                         <div class="col-md-3">
+                           <input name="Nationality" type="text" id="MainContent_Nationality" class=" form-control" placeholder="الجنسية">
+                      </div>
+                         <div class="col-md-3">
+                           <input name="pass_id" type="text" id="MainContent_pass_id" class=" form-control" placeholder="رقم الجواز">
+                      </div>
+                         <div class="col-md-3">
+                           <input name="phone" type="text" id="MainContent_phone" class=" form-control" placeholder="رقم الهاتف/الواتس">
+                      </div>
+                         <div class="col-md-3">
+                             <span id="MainContent_Label3" style="font-weight:bold;">هل تم اخضاعك لفحص فيروس كرونا؟</span>
+                             </div>
+                            <div class="col-md-2">
+                             <table id="MainContent_Exam_state">
+                <tbody><tr>
+                    <td><input id="MainContent_Exam_state_0" type="radio" name="Exam_state" value="نعم"><label for="MainContent_Exam_state_0">نعم</label></td><td><input id="MainContent_Exam_state_1" type="radio" name="Exam_state" value="لا"><label for="MainContent_Exam_state_1">لا</label></td>
+                </tr>
+            </tbody></table>
+                                      </div>
+                         <div class="col-md-3">
+                             <span id="MainContent_Label4" style="font-weight:bold;">اذا كانت الاجابة نعم يجب اكمال البيانات</span>
+                      </div>
+                        <div class="col-md-2">
+                           <span id="MainContent_Label11" style="font-weight:bold;"> متى</span><input name="Exam_det" type="date" id="MainContent_Exam_det" class=" form-control" placeholder="متى">
+                      </div>
+                        <div class="col-md-2">
+                             <span id="MainContent_Label10" style="font-weight:bold;"> اين </span> <input name="Exam_date" type="text" id="MainContent_Exam_date" class=" form-control" placeholder="اين">
+                      </div>
+                          </div> 
+                       
+                       <div class="row">
+                       <div class="col-md-3">
+                           <input name="loc_start" type="text" id="MainContent_loc_start" class=" form-control" placeholder=" مكان الانطلاق">
+                      </div>
+                         <div class="col-md-3">
+                           <input name="cur_count_day" type="text" id="MainContent_cur_count_day" class=" form-control" placeholder="اجمالي عدد الايام من يوم الانطلاق">
+                      </div>
+                         <div class="col-md-3">
+                           <input name="Plate_Number" type="text" id="MainContent_Plate_Number" class=" form-control" placeholder="رقم الشاحنة">
+                      </div>
+                         <div class="col-md-3">
+                           <input name="mid_in" type="text" id="MainContent_mid_in" class=" form-control" placeholder="بلد الاصدار">
+                      </div>
+                         <div class="col-md-4">
+                             <input name="loc_to" type="text" id="MainContent_loc_to" class=" form-control" placeholder="وجهة الشاحنة">
+                      </div>
+                         <div class="col-md-4">
+                          <input name="count_day_in_city" type="text" id="MainContent_count_day_in_city" class=" form-control" placeholder="عدد ايام المكوث في العاصمة او المحافظة">
+                      </div>
+                        <div class="col-md-4">
+                           <input name="loc_end" type="text" id="MainContent_loc_end" class=" form-control" placeholder="عنوان تفريغ البضاعة">
+                      </div>
+                        <div class="col-md-3">
+                            <span id="MainContent_Label5" style="font-weight:bold;">تاريخ العودة</span><input name="back_date" type="date" id="MainContent_back_date" class=" form-control">
+                      </div>
+                              <div class="col-md-3">
+                            <span id="MainContent_Label6" style="font-weight:bold;">نوع البضاعة</span><input name="Load_type" type="text" id="MainContent_Load_type" class=" form-control" placeholder="نوع البضاعة">
+                      </div>
+                               <div class="col-md-3">
+                            <span id="MainContent_Label7" style="font-weight:bold;">اسم التاجر</span><input name="name_bs" type="text" id="MainContent_name_bs" class=" form-control" placeholder="اسم التاجر">
+                      </div>
+                              <div class="col-md-3">
+                            <span id="MainContent_Label8" style="font-weight:bold;">رقم هاتف التاجر</span><input name="phone_bs" type="text" id="MainContent_phone_bs" class=" form-control" placeholder="رقم الهاتف">
+                      </div>
+                          </div> 
+                           <div class="col-md-3">
+                                            <input type="submit" name="B_add" value="اضافة " onclick="showProgress();" id="MainContent_B_add" class="form-control btn-primary" style="font-weight:bold;">
+                        
+                      </div>
+                              <div class="col-md-3">
+                                           <input type="submit" name="B_save" value="حفظ " onclick="showProgress();" id="MainContent_B_save" class="form-control btn-danger" style="font-weight:bold;">
+                        
+                      </div>
+                      <div class="col-md-3">
+                        <input type="submit" id="qr" name="Button2" value="انشاء كود " id="MainContent_Button2"  class="aspNetDisabled form-control btn-primary" style="font-weight:bold;">
+      
+    </div>
+                               <div class="col-md-3">
+                                          <input type="submit" name="Button2" value="تعديل " id="MainContent_Button2" disabled="disabled" class="aspNetDisabled form-control btn-primary" style="font-weight:bold;">
+                        
+                      </div>
+                              <div class="col-md-3">
+                                          <input type="submit" name="Button3" value="إلغاء " id="MainContent_Button3" disabled="disabled" class="aspNetDisabled form-control btn-danger" style="font-weight:bold;">
+                        
+                      </div>
+        
+                                  <br>
+                        
+                  </div> </div> 
+                                  <div id="MainContent_UpdateProgress1" style="display:none;" role="status" aria-hidden="true">
+                
+        
+                                                <div class="loading">
+              
+            </div>
+        
+            </div>
+                      
+                              
+                        
+                          
+        </div>
+             
+                </div> 
+                           
+        
+                    <hr>
+                    <footer>
+                        <p>© 2020 - جميع الحقوق محفوظة للهيئة العامة لتنظيم شؤون النقل البري</p>
+                        
+                    </footer>
+                </div>
+            
+        
+        <script >
+            $(document).ready(function(){
+  $("#qr").click(function(){
+    // $("div").text($("form").serialize());
+    alert($("form").serialize());
+  });
+});
+
+        </script>
+      
+       
+        </form>
+</body>
