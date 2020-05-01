@@ -1,9 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
+<html itemscope itemtype="http://schema.org/Product"></html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Utf-8">
     <link href="Content/style.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../qrcode.js"></script>
+    <script type="text/javascript" src="../qrcode_SJIS.js"></script>
+    <script type="text/javascript" src="assets/sample.js"></script>
+    <link rel="stylesheet" href="assets/style.css" type="text/css" />
+    <title itemprop="name">QR Code Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/pbkdf2.js"></script>
 </head>
-<body>
+
+<body onload="body_loadHander()">
+    <img itemprop="image" src="assets/qrcode.png" style="display:none;"/>
     <form method="post" action="./" id="ctl01">
        
         
@@ -161,7 +172,7 @@
                       </div>
                       <div class="col-md-3">
                         <input type="submit" id="qr" name="Button2" value="انشاء كود " id="MainContent_Button2"  class="aspNetDisabled form-control btn-primary" style="font-weight:bold;">
-      
+                      </form>
     </div>
                                <div class="col-md-3">
                                           <input type="submit" name="Button2" value="تعديل " id="MainContent_Button2" disabled="disabled" class="aspNetDisabled form-control btn-primary" style="font-weight:bold;">
@@ -188,28 +199,67 @@
                         
                           
         </div>
-             
-                </div> 
-                           
-        
-                    <hr>
-                    <footer>
-                        <p>© 2020 - جميع الحقوق محفوظة للهيئة العامة لتنظيم شؤون النقل البري</p>
-                        
-                    </footer>
-                </div>
+      
+        <div class="section">
+
+            <form name="qrForm">
+              <span>TypeNumber:</span>
+              <select name="t"></select>
+              <span>ErrorCorrectionLevel:</span>
+              <select name="e">
+                <option value="L">L(7%)</option>
+                <option value="M" selected="selected">M(15%)</option>
+                <option value="Q">Q(25%)</option>
+                <option value="H">H(30%)</option>
+              </select>
+              <span>Mode:</span>
+              <select name="m">
+                <option value="Numeric">Numeric</option>
+                <option value="Alphanumeric">Alphanumeric</option>
+                <option value="Byte" selected>Byte</option>
+                <option value="Kanji">Kanji</option>
+              </select>
+              <span>Multibyte:</span>
+              <select name="mb">
+                <option value="default">None</option>
+                <option value="SJIS">SJIS</option>
+                <option value="UTF-8" selected>UTF-8</option>
+              </select>
+              
             
+            </form>
+            <!-- <h3>Appendix (data capacity in bytes)</h3>
+            <div id="dataCaps"></div>
+          </div> -->
+          <div id="name"></div>
+        </body>
         
         <script >
             $(document).ready(function(){
   $("#qr").click(function(){
     // $("div").text($("form").serialize());
-    alert($("form").serialize());
+    var serializedData = $(document.getElementById("ctl01")).serializeArray();
+    var data;
+    $.each(serializedData, function (key, item) {
+        data += item.name + ":";
+        console.log(item.name+': ' + item.value);
+    })
+    // JSON.stringify(arr);
+    var json =JSON.stringify(serializedData);
+//     $(window).load(function(){
+       update_qrcode2(json);
+// });
+//   update_qrcode();
+    alert(json);
   });
 });
+ function name() {
+     update_qrcode2("d");
+
+}
 
         </script>
       
        
-        </form>
-</body>
+        
+</html>

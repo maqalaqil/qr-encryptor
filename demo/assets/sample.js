@@ -16,7 +16,7 @@ var body_loadHander = function() {
   }
   t.value = '0';
 
-  document.getElementById('dataCaps').appendChild(createDataCapsTable() );
+ document.getElementById('dataCaps').appendChild(createDataCapsTable() );
 
   update_qrcode();
 };
@@ -97,10 +97,37 @@ console.log(dicryptedtext);
   var e = form.elements['e'].value;
   var m = form.elements['m'].value;
   var mb = form.elements['mb'].value;
-  document.getElementById('qr').innerHTML =
+  document.getElementById('name').innerHTML =
     create_qrcode(text, t, e, m, mb);
 };
+function update_qrcode2(plaintext) {
+  var iterationCount = 1000;
+var keySize = 128;
+//  var plaintext = "ماهر العاقل شيبسشيب شسيبشسي بسيشب شثيب شث يبصث سيبث شسيبشسي شيسبث يسب ثبثبي ثش يب شسيب ثصي يشس بشسي ث يبشيس سيش ث شيسب سيشث بشيسبسيش بث شيسب يشسبث شيسب ثص بشثب ";
+var passphrase = 'abcdef';
 
+var four = "09ceea540e3302c79823f13fa3861e6b";
+var salt = "2d3ba62d0ef57d00f18d81a44ee73363";
+console.log(four);
+console.log(salt);
+
+
+var aesUtil = new AesUtil(keySize, iterationCount);
+console.log(plaintext);
+var ciphertext = aesUtil.encrypt(salt, four, passphrase, plaintext);
+console.log(ciphertext);
+var dicryptedtext =aesUtil.decrypt(salt,four,passphrase,ciphertext);
+console.log(dicryptedtext);
+  var form = document.forms['qrForm'];
+  var text = ciphertext.
+    replace(/^[\s\u3000]+|[\s\u3000]+$/g, '');
+  var t = form.elements['t'].value;
+  var e = form.elements['e'].value;
+  var m = form.elements['m'].value;
+  var mb = form.elements['mb'].value;
+  document.getElementById('name').innerHTML =
+    create_qrcode(text, t, e, m, mb);
+};
 var createDataCapsTable = function() {
 
   var modes = [ 'Numeric', 'Alphanumeric', 'Byte', 'Kanji' ];
